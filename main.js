@@ -13,6 +13,7 @@ async function fetchDog () {
     const img = document.querySelector("img")
     img.src = data[0].url
 }
+fetchDog()
 
 const button = document.querySelector("button")
 button.onclick = fetchDog
