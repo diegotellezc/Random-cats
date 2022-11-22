@@ -14,22 +14,25 @@
         }
         h1 {
             font-size: 80px;
-            margin: 50px 0 10px 0;
+            margin: 50px 0 0 0;
         }
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        .container h2 {
-            padding-right: 20px;
-        }
         .container button {
-            width: 100px;
-            height: 40px;
+            width: 200px;
+            height: 60px;
             border-radius: 20px;
             border: none;
             font-family: fantasy;
+            font-size: 20px;
+            align-items: center;
+            background-color: rgb(228, 164, 94);
+            border: 5px solid rgb(249, 151, 66);
+            cursor: pointer;
+            font-weight: bold;
         }
         .container button:hover {
             border: 5px solid rgb(228, 164, 94);
@@ -48,8 +51,7 @@
 <body>
     <h1>Random dogs</h1>
     <div class="container">
-        <h2>Reload to change the photo</h2>
-        <button>Click Here</button>
+        <button>Show me a dog</button>
     </div>
 
     <img alt="Random dogs">
