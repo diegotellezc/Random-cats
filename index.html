@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            background-color: rgb(35, 35, 56);
+            color: white;
+            font-family: fantasy;
+        }
+        h1 {
+            font-size: 80px;
+            margin: 50px 0 10px 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container h2 {
+            padding-right: 20px;
+        }
+        .container button {
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            font-family: fantasy;
+        }
+        .container button:hover {
+            border: 5px solid rgb(228, 164, 94);
+            background-color: rgb(227, 141, 67);
+        }
+        img {
+            border-radius: 20px;
+            margin: 20px;
+            width: auto;
+            height: 600px;
+        }
+
+    </style>
+    <title>Random Dogs</title>
+</head>
+<body>
+    <h1>Random dogs</h1>
+    <div class="container">
+        <h2>Reload to change the photo</h2>
+        <button>Click Here</button>
+    </div>
+
+    <img alt="Random dogs">
+
+    <script src="./main.js"></script>
+</body>
+</html>
