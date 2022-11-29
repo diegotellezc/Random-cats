@@ -4,57 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            display: grid;
-            place-items: center;
-            background-color: rgb(35, 35, 56);
-            color: white;
-            font-family: fantasy;
-        }
-        h1 {
-            font-size: 80px;
-            margin: 50px 0 0 0;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .container button {
-            width: 200px;
-            height: 60px;
-            border-radius: 20px;
-            border: none;
-            font-family: fantasy;
-            font-size: 20px;
-            align-items: center;
-            background-color: rgb(228, 164, 94);
-            border: 5px solid rgb(249, 151, 66);
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .container button:hover {
-            border: 5px solid rgb(228, 164, 94);
-            background-color: rgb(227, 141, 67);
-        }
-        img {
-            border-radius: 20px;
-            margin: 20px;
-            width: auto;
-            height: 600px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
     <title>Random Dogs</title>
 </head>
-<body>
-    <h1>Random dogs</h1>
-    <div class="container">
-        <button>Show me a dog</button>
-    </div>
 
-    <img alt="Random dogs">
+<body>
+    <h1>Cats App</h1>
+    <span id="error"></span>
+    <h2>Random Cats</h2>
+    
+    <section id="randomDogs">
+        <div class="images">
+            <article>
+                <img id="img1" height="350" alt="Random cats">
+                <button id="btnRandom1">
+                    Add to favorites
+                </button>
+            </article>
+
+            <article>
+                <img id="img2" height="350" alt="Random cats">
+                <button id="btnRandom2">
+                    Add to favorites
+                </button>
+            </article>
+
+            <article>
+                <img id="img3" height="350" alt="Random cats">
+                <button id="btnRandom3">
+                    Add to favorites
+
+                </button>
+            </article>
+
+        </div>
+        <button id="reloadButton" onclick="loadRandomCats()">Show me more cats</button>
+    </section>
+
+    <h2>Favorite Cats</h2>
+    
+    <section id="favoriteCats">
+
+    </section>
+
 
     <script src="./main.js"></script>
 </body>
