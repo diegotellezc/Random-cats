@@ -11,26 +11,26 @@
 <body>
     <h1>Cats App</h1>
     <span id="error"></span>
-    <h2>Random Cats</h2>
+    <h2 class="h2RandomCats">Random Cats</h2>
     
     <section id="randomDogs">
         <div class="images">
             <article>
-                <img id="img1" height="350" alt="Random cats">
+                <img id="img1" height="300" alt="Random cats">
                 <button id="btnRandom1">
                     Add to favorites
                 </button>
             </article>
 
             <article>
-                <img id="img2" height="350" alt="Random cats">
+                <img id="img2" height="300" alt="Random cats">
                 <button id="btnRandom2">
                     Add to favorites
                 </button>
             </article>
 
             <article>
-                <img id="img3" height="350" alt="Random cats">
+                <img id="img3" height="300" alt="Random cats">
                 <button id="btnRandom3">
                     Add to favorites
 
@@ -38,10 +38,13 @@
             </article>
 
         </div>
-        <button id="reloadButton" onclick="loadRandomCats()">Show me more cats</button>
     </section>
 
-    <h2>Favorite Cats</h2>
+    <div class="reloadButton">
+        <button id="reloadButton" onclick="loadRandomCats()">Show me more cats</button>
+    </div>
+
+    <h2 class="h2FavouriteCats">Favorite Cats</h2>
     
     <section id="favoriteCats">
 

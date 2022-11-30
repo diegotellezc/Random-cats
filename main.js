@@ -2,6 +2,8 @@ const API_URL_RANDOM = "https://api.thecatapi.com/v1/images/search?limit=3"
 
 const API_URL_FAVOURITES = "https://api.thecatapi.com/v1/favourites?api_key=live_VLXr0uQy0GF1IymMvzy9siTxrOBjB0qptKbgrjai975xqDEe1EhU2alZKq0t8DuC"
 
+const API_URL_FAVOURITES_DELETE = (id) => `https://api.thecatapi.com/v1/favourites/${id}?api_key=live_VLXr0uQy0GF1IymMvzy9siTxrOBjB0qptKbgrjai975xqDEe1EhU2alZKq0t8DuC`
+
 const spanError = document.getElementById("error")
 
 
@@ -36,12 +38,14 @@ async function loadFavouritesCats() {
     const data = await res.json();
     console.log("Favourites");
     console.log(data);
-
+    
     if(res.status !== 200) {
         spanError.innerHTML = "Hubo un error: " + res.status + " " + res.message
     } else {
+        const sectionFavorites = document.getElementById("favoriteCats")
+        sectionFavorites.innerHTML = "";
+
         data.forEach(cat => {
-            const sectionFavorites = document.getElementById("favoriteCats")
             const article = document.createElement("article")
             const img = document.createElement("img")
             const btn = document.createElement("button")
@@ -52,6 +56,7 @@ async function loadFavouritesCats() {
             img.src = cat.image.url
             img.width = 350
             sectionFavorites.appendChild(article)
+            btn.onclick = () => deleteFavouriteCats(cat.id)
         });
     }
 }
@@ -73,6 +78,23 @@ async function saveFavouriteCats(id) {
 
     if(res.status !== 200) {
         spanError.innerHTML = "Hubo un error: " + res.status + " " + data.message
+    } else {
+        console.log("A cat was save in favourites");
+        loadFavouritesCats()
+    }
+}
+
+async function deleteFavouriteCats(id) {
+    const res = await fetch(API_URL_FAVOURITES_DELETE(id), {
+        method: "DELETE",
+    })
+    const data = await res.json();
+
+    if(res.status !== 200) {
+        spanError.innerHTML = "Hubo un error: " + res.status + " " + data.message
+    } else {
+        console.log("A cat was removed from favorites");
+        loadFavouritesCats()
     }
 }
 
