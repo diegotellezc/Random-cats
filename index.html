@@ -50,6 +50,18 @@
 
     </section>
 
+    <section id="uploadingCat">
+        <h2>Upload a photo</h2>
+
+        <form id="uploadingForm">
+            <input type="file" name="file" id="file" onchange="previewImage()"><br>
+            <label for="file">Choose a file</label>
+            <img id="imagePreview">
+            <button type="button" onclick="uploadCatPhoto()">Upload your photo</button>
+            
+        </form>
+    </section>
+
 
     <script src="./main.js"></script>
 </body>

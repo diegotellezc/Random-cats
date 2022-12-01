@@ -8,7 +8,7 @@ body {
 h1 {
     display: flex;
     justify-content: center;
-    font-size: 80px;
+    font-size: 60px;
     background-color: black;
     margin: 0;
     padding: 20px 0;
@@ -33,7 +33,7 @@ h1 {
     box-sizing: border-box;
     padding: 20px 0;
 }
-.images button, #favoriteCats button {
+.images button, #favoriteCats button, #uploadingCat form button {
     width: 200px;
     height: 50px;
     border-radius: 20px;
@@ -46,7 +46,7 @@ h1 {
     font-weight: bold;
     margin-bottom: 30px;
 }
-.images button:hover, #favoriteCats button:hover, #reloadButton:hover  {
+.images button:hover, #favoriteCats button:hover, #reloadButton:hover, #uploadingCat form button:hover{
     border: 5px solid rgb(228, 164, 94);
     background-color: rgb(227, 141, 67);
 }
@@ -100,4 +100,52 @@ article {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: black;
+}
+
+#uploadingCat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#uploadingCat h2 {
+    font-size: 30px;
+    margin: 0;
+    padding: 20px 0 0 0;
+    box-sizing: border-box;
+    padding: 20px 0;
+}
+
+#uploadingCat form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#uploadingCat form input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+#uploadingCat form label {
+    display: inline-block;
+    transition: all .5s;
+    padding: 15px 40px !important;
+    color: black;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    border: none;
+    font-family: fantasy;
+    font-size: 20px;
+    background-color: rgb(228, 164, 94);
+    border: 5px solid rgb(249, 151, 66);
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
